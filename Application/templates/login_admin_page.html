@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Admin Login{% endblock %}
+
+{% block content %}
+<div class="login-wrapper">
+  <div class="login-card">
+    <h2>Admin Login</h2>
+  <form method="POST" action="{{ url_for('login_admin_action') }}">
+      <div class="form-group">
+        <label>Admin ID</label>
+        <input type="text" name="admin_id" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" name="password" class="form-control" required>
+      </div>
+        <button type="submit" class="btn">
+        <a href="{{ url_for('admin_dashboard_page') }}">Login</a></button>
+        <button type="submit" class="btn">
+        <a href="{{ url_for('index') }}">Home</a></button>
+    </form>
+  </div>
+</div>
+<!-- attach JS -->
+<script src="{{ url_for('static', filename='JS/login.js') }}"></script>
+{% endblock %}
+ 

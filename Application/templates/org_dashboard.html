@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Organization Dashboard{% endblock %}
+{% block content %}
+<div class="org_dashboard">
+  <button class="signout-btn">⎋</button>
+  <h2>Organization Dashboard</h2>
+  <p>Manage elections and monitor voter, candidate activity here.</p>
+  <a href="{{ url_for('org_results') }}" class="btn">Results</a>
+  <a href="{{ url_for('candidate_list_page') }}" class="btn">Candidate list</a>
+</div>
+
+{% endblock %}
+
+  

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Home - CryptoVoting{% endblock %}
+{% block content %}
+<section class="main-banner">
+  <h1>Welcome to CryptoVoting</h1>
+  <p>Secure, Transparent & Digital Elections</p>
+</section>
+
+<section class="role-section">
+  <h2>Select Your Role</h2>
+  <div class="roles">
+    <!-- login_user_page -->
+    <div class="role-card" onclick="window.location.href='{{ url_for('login_user_page') }}'">Voter</div>
+    
+    <!-- login_org_page -->
+    <div class="role-card" onclick="window.location.href='{{ url_for('login_org_page') }}'">Organization</div>
+    
+    <!-- login_admin_page -->
+    <div class="role-card" onclick="window.location.href='{{ url_for('login_admin_page') }}'">Admin</div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Voter Login{% endblock %}
+
+{% block content %}
+<div class="login-wrapper">
+  <div class="login-card">
+    <h2>Voter Login</h2>
+    <form method="POST" action="{{ url_for('voter_dashboard') }}">
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" name="email" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" name="password" class="form-control" required>
+      </div>
+      <a href="{{ url_for('voter_dashboard') }}" class="btn">Login</a>
+      <a href="{{ url_for('index') }}" class="btn">Home</a>
+    </form>
+  </div>
+</div>
+<!-- attach JS -->
+<script src="{{ url_for('static', filename='JS/login.js') }}"></script>
+{% endblock %}

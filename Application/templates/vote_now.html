@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block title %}Board of Directors Election{% endblock %}
+
+{% block content %}
+<div class="election-container">
+  <h1>Board of Directors Election</h1>
+    
+  <!-- Board President Section -->
+  <div class="section">
+    <h2>Please select a candidate for <span>Board President</span></h2>
+    <label class="option">
+      <input type="radio" name="president" value="Sebastian Gonzales">
+      Sebastian Gonzales <span class="info">ℹ</span>
+    </label>
+    <label class="option">
+      <input type="radio" name="president" value="Andrea Smith" checked>
+      Andrea Smith <span class="info">ℹ</span>
+    </label>
+    <label class="option">
+      <input type="radio" name="president" value="Stella Clark">
+      Stella Clark <span class="info">ℹ</span>
+    </label>
+  </div>
+
+  <!-- Treasurer Section -->
+  <!-- <div class="section">
+    <h2>Please select a candidate for <span>Treasurer</span></h2>
+    <label class="option">
+      <input type="radio" name="treasurer" value="Matt Hill" checked>
+      Matt Hill <span class="info">ℹ</span>
+    </label>
+    <label class="option">
+      <input type="radio" name="treasurer" value="Amber Anderson">
+      Amber Anderson <span class="info">ℹ</span>
+    </label>
+  </div> -->
+
+  <!-- Footer -->
+  <div class="footer-nav">
+    <span class="page-info"></span>
+    <div class="buttons">
+      <button class="btn secondary" onclick="window.location.href='{{ url_for('voter_dashboard') }}'">BACK</button>
+      <button class="btn primary" onclick="validateForm()">CONTINUE</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function validateForm() {
+    let president = document.querySelector('input[name="president"]:checked');
+    let treasurer = document.querySelector('input[name="treasurer"]:checked');
+
+    if (!president || !treasurer) {
+      alert("Your vote is conted.Thank you for participating in the election.");
+      return false;
+    }
+
+    alert("Selections saved. Proceeding...");
+    window.location.href = "{{ url_for('welcome') }}";
+  }
+</script>
+{% endblock %}

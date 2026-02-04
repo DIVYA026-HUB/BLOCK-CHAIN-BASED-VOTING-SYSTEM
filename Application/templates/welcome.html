@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<section class="main-banner">
+    <h1>CryptoVoting.</h1>
+</section>
+
+
+    <!-- ───── Updates & About ECI Section ───── -->
+<div style="max-width: 1100px; margin: 50px auto; padding: 20px;">
+
+    <!-- Updates Section -->
+    <div style="background: #FEF3C7; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); padding: 25px; margin-bottom: 30px;">
+        <h2 style="font-weight: bold; margin-bottom: 20px;">Updates</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+            <!-- Elections Box -->
+            <div style="flex: 1; min-width: 250px; background: #f9f9f9; padding: 20px; border-radius: 10px; text-align: center;">
+                <div style="font-size: 40px; margin-bottom: 10px;">🗳️</div>
+                <h3 style="font-weight: bold;">Elections</h3>
+                <p>Current, future & past election and candidate information</p>
+                <a href="{{ url_for('elections') }}" class="btn btn-outline-primary" >View Information ↗</a>
+            </div>
+
+            <!-- Election Results Box -->
+            <div style="flex: 1; min-width: 250px; background: #f9f9f9; padding: 20px; border-radius: 10px; text-align: center;">
+                <div style="font-size: 40px; margin-bottom: 10px;">🏆</div>
+                <h3 style="font-weight: bold;">Election results</h3>
+                <p>View current election results or view past election results and statistical report.</p>
+                <a href="{{ url_for('admin_results') }}" class="btn btn-outline-primary" style="margin-right: 10px;">View Results ↗</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- About ECI Section -->
+    <div style="background: #FEF3C7; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); padding: 25px;">
+        <h2 style="font-weight: bold;">About CryptoVoting</h2>
+        <p style="margin-top: 10px;">
+            The Election Commission of India is an autonomous constitutional authority responsible for administering Union and State election processes in India. The body administers elections to the Lok Sabha, Rajya Sabha, State Legislative Assemblies in India, and the offices of the President and Vice President in the country.
+        </p>
+        <a href="#" class="btn btn-link text-primary"  style="margin-top: 10px; display: inline-block;">Read more ↗</a>
+    </div>
+
+</div>
+
+
+
+{% endblock %}
+

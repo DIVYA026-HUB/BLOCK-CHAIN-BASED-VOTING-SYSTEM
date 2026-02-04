@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Elections{% endblock %}
+{% block content %}
+<div class="services-section">
+  <h2>Elections</h2>
+  <div class="elections-grid">
+    <!-- First row cards -->
+    <div class="election-card">
+      <h3>Student Union</h3>
+      <p>Vote for campus reps</p>
+      <a href="{{ url_for('login_user_page') }}" class="btn">Vote Now</a>
+    </div>
+
+    <div class="election-card">
+      <h3>Community Leader</h3>
+      <p>Choose your leader</p>
+      <a href="{{ url_for('login_user_page') }}" class="btn">Vote Now</a>
+    </div>
+
+    <div class="election-card">
+      <h3>Board Elections</h3>
+      <p>Pick new board members</p>
+      <a href="{{ url_for('login_user_page') }}" class="btn">Vote Now</a>
+    </div>    
+  </div>
+</div>
+{% endblock %}

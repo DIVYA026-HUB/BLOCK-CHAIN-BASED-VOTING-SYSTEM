@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Voter Dashboard{% endblock %}
+{% block content %}
+<div class="voter_dashboard">
+  <button class="signout-btn">⎋</button>
+  <h2>Hello User!</h2>
+  <p>Welcome! Here you can view and participate in elections.</p>
+  <p class="description">Please select one candidate for given position below. You can only select one candidate per position.</p>
+    <hr>
+  <!-- <a href="{{ url_for('elections_voter') }}" class="btn">View Elections</a> -->
+  <div class="services-section">
+  <!-- <h2>Elections</h2> -->
+  <div class="elections-grid">
+    <div class="election-card">
+      <h3>Student Union</h3>
+      <p>Vote for campus reps</p>
+      <a href="{{ url_for('vote_now') }}" class="btn">Vote Now</a>
+    </div>
+
+    <div class="election-card">
+      <h3>Community Leader</h3>
+      <p>Choose your leader</p>
+      <a href="{{ url_for('vote_now') }}" class="btn">Vote Now</a>
+    </div>
+
+    <div class="election-card">
+      <h3>Board Elections</h3>
+      <p>Pick new board members</p>
+      <a href="{{ url_for('vote_now') }}" class="btn">Vote Now</a>
+    </div>
+  </div>
+</div>
+
+</div>
+{% endblock %}
