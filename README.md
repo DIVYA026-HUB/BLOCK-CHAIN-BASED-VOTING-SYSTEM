@@ -1,4 +1,5 @@
 🗳️ Blockchain-Based Voting System
+
 📌 Overview
 
 The Blockchain-Based Voting System is a secure and decentralized digital voting platform designed to ensure transparency, integrity, and immutability of votes using blockchain technology.
@@ -33,6 +34,7 @@ Results are calculated transparently.
 The main objective of this project is to build a secure, transparent, and reliable voting system using blockchain technology to enhance trust in digital elections.
 
 📚 Future Scope
+
 Integration with national ID systems
 Mobile voting applications
 Advanced cryptographic security
