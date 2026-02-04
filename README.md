@@ -19,7 +19,6 @@ Blockchain Technology
 Smart Contracts
 Backend: (e.g., Node.js / Python / Java)
 Frontend: (e.g., React / HTML / CSS / JS)
-Database: (if applicable)
 
 ⚙️ How It Works
 
